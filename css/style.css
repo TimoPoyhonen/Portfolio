@@ -1,0 +1,244 @@
+@import url('http://fonts.cdnfonts.com/css/sf-pro-display');
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'SF Pro Display', sans-serif;
+    background-color: rgb(242, 242, 247);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(28, 28, 30);
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: rgb(242, 242, 247);
+    text-align: center;
+    padding: 6px 30px;
+    text-decoration: none;
+}
+
+li a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: 700;
+    text-align: center;
+    margin: 8px 0px 0px 0px;
+    color: rgb(28, 28, 30);
+}
+
+h2 {
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+    margin: -2px 0px 0px 0px;
+    color: rgb(28, 28, 30);
+
+}
+
+.kuvat {
+    margin-top: 10px;
+}
+
+.kuva {
+    border-radius: 6px;
+    padding: 10px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 250px;
+    grid-auto-flow: dense;
+}
+
+.kuva img {
+    border-radius: 4px;
+    box-shadow: 2px 2px 6px #ceced2,
+        -2px -2px 6px #ffffff;
+}
+
+.kuva img:hover {
+    transition: 0.1s ease-in-out;
+    filter: opacity(90%);
+    transform: scale(1.015);
+    cursor: pointer;
+}
+
+.korkea {
+    grid-row: span 2;
+}
+
+.levea {
+    grid-column: span 2;
+}
+
+.iso {
+    grid-row: span 2;
+    grid-column: span 2;
+}
+
+.kuva div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media(max-width: 560px) {
+    .korkea {
+        grid-row: span 1;
+    }
+
+    .levea {
+        grid-column: span 1;
+    }
+
+    .iso {
+        grid-row: span 1;
+        grid-column: span 1;
+    }
+}
+
+.kokonaan-body {
+    display: grid;
+    place-items: center;
+
+}
+
+.kokonaan {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgb(0, 0, 0, .92);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+    animation-duration: 0.45s;
+    animation-name: animaatio;
+}
+
+@keyframes animaatio {
+    from {
+        opacity: 20%;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+.kokonaan span {
+    position: absolute;
+    right: 0;
+    width: 90px;
+    height: 90px;
+
+    font-size: 70px;
+    font-weight: bolder;
+    color: #fff;
+    cursor: pointer;
+    z-index: 101;
+}
+
+.kokonaan h2 {
+    color: #fff;
+    font-weight: 600;
+    font-size: 30px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.kokonainen .kokonaan-body .row {
+    width: 79%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.kokonaan-body .row {
+    width: 90%;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px 30px;
+}
+
+.kokonaan-body .row .left {
+    overflow: hidden;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.356);
+}
+
+.kokonaan-body .row .left img {
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.kokonaan-body .row .right {
+    display: flex;
+    align-items: center;
+}
+
+.kokonaan-body .row .right .info {
+    padding-left: 20px;
+    overflow-y: scroll;
+    height: 400px;
+    background-color: rgb(0, 0, 0, .4);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.356);
+    padding: 20px 20px 0px 20px;
+    border-radius: 4px;
+}
+
+.kokonaan-body .row .right .info p {
+    color: #fff;
+    font-size: 22px;
+    line-height: 26px;
+    padding-bottom: 15px;
+    text-align: justify;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+@media (max-width: 991px) {
+    .kokonaan-body .row .right .info {
+        padding-left: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .kokonaan-body .row {
+        width: 90%;
+        top: 500;
+        grid-template-columns: 1fr;
+    }
+
+    .nimi h1 {
+        font-size: 50px;
+    }
+
+    .nimi h2 {
+        font-size: 17px;
+    }
+}
