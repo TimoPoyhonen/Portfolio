@@ -1,12 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>test</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Timo Pöyhönen </title>
+    <link rel="icon" type="image/x-icon" href="./img/fav/favicon.ico">
+    <link rel="manifest" href="./img/fav/site.webmanifest">
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="./js/1laz.js"></script>
+    <script src="./js/2laz.js"></script>
+  </head>
+  <body>
+    <script>
+      $(function () {
+        $("img.lazy").lazyload({ effect: "fadeToggle" });
+      });
+    </script>
+    <div class="container">
+      <div class="valikko">
+        <ul>
+          <li><a class="active" href="#Home">Home</a></li>
+          <li><a href="#About">About</a></li>
+          <li><a href="#Contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="nimi">
+        <h1>Timo Pöyhönen</h1>
+        <h2>Music Producer, Designer, Web Developer & Designer.</h2>
+      </div>
+      <div class="kuvat">
+        <div class="kuva">
+          <div class="korkea">
+            <img
+              class="lazy"
+              data-original="img/TASK3-Timo Pöyhönen (1).png"
+              width="640"
+              height="480"
+              alt=""
+            />
+          </div>
+
+          <div class="levea">
+            <img class="lazy" data-original="img/TASK1.jpg" alt="" />
+          </div>
+
+          <div class="iso">
+            <img class="lazy" data-original="img/test5.png" alt="" />
+          </div>
+
+          <div>
+            <img
+              class="lazy"
+              data-original="img/TIMBURU X DXNI@1.5x.png"
+              alt=""
+            />
+          </div>
+
+          <div>
+            <img class="lazy" data-original="img/AKETJU-LOGO.png" alt="" />
+          </div>
+
+          <div class="iso">
+            <img class="lazy" data-original="img/sss.png" alt="" />
+          </div>
+
+          <div class="korkea">
+            <img class="lazy" data-original="img/FIGMA.jpg" alt="" />
+          </div>
+
+          <div class="korkea">
+            <img class="lazy" data-original="img/kar.png" alt="" />
+          </div>
+
+          <div class="levea">
+            <img class="lazy" data-original="img/KT-BANNERI@2x.png" alt="" />
+          </div>
+
+          <div class="iso">
+            <img class="lazy" data-original="img/TRaTimOye.png" alt="" />
+          </div>
+
+          <div>
+            <img class="lazy" data-original="img/cover.png" alt="" />
+          </div>
+
+          <div class="iso">
+            <img class="lazy" data-original="img/MOONRISE@3x.png" alt="" />
+          </div>
+
+          <div class="iso">
+            <img class="lazy" data-original="img/album cover@3x.png" alt="" />
+          </div>
+
+          <div>
+            <img class="lazy" data-original="img/3AM.png" alt="" />
+          </div>
+
+          <div class="korkea">
+            <img class="lazy" data-original="img/ktsivu.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="kokonainen">
+        <div class="kokonaan-body">
+          <div class="kokonaan">
+            <span>&times;</span>
+            <div class="row">
+              <div class="left"><img src="./img/eikuva.png" alt="" /></div>
+
+              <div class="right">
+                <div class="info">
+                  <h2 id="demo">Kuva</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Nihil incidunt dolor ipsam officiis optio minima et quis
+                    deleniti ab odit, rem aut impedit, voluptates nesciunt omnis
+                    soluta?
+                  </p>
+
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Officia ut tempore excepturi magnam nobis labore assumenda
+                    voluptatibus beatae corporis fugiat quas expedita ad iure
+                    quod harum culpa, atque quam dolorem!
+                  </p>
+
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Doloremque, optio.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
 </html>
